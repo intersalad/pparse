@@ -12,7 +12,7 @@ const Scraper = () => {
         setContent('');
 
         try {
-            const response = await axios.post('http://localhost:5000/scrape', { url });
+            const response = await axios.post('/api/scrape', { url });
             setContent(response.data.content);
         } catch (err) {
             setError('Ошибка при получении данных');
